@@ -6,6 +6,7 @@ import readme from './README.md';
 
 import {
   Form,
+  useFormContext,
   Input,
   TextArea,
   RadioGroup,
@@ -27,21 +28,21 @@ class SimpleValidation extends Component {
           }>
           <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             <div style={{ flex: 1, marginRight: '2rem' }}>
-              <Input name="name" label="First name:" required />
-              <Input name="favorite.color" label="Favorite color:" required />
+              <TextArea name="bio" label="Bio" validate={validate} />
+              <Input name="favorite.color" label="Favorite color:" validate={validate} />
               <Scope scope="favorite">
                 <Input name="food" label="Favorite food:" required />
                 <Input name="animal" label="Favorite animal:" required />
               </Scope>
-              <Input name="friends[0]" label="Friend 1:" required />
-              <Input name="friends[1]" label="Friend 2:" required />
-              <Input name="friends[2]" label="Friend 3:" required />
-              <TextArea name="bio" label="Bio" required />
-              <RadioGroup name="gender" label="Gender" required>
+              <Input name="friends[0]" label="Friend 1:" validate={validate} />
+              <Input name="friends[1]" label="Friend 2:" validate={validate} />
+              <Input name="friends[2]" label="Friend 3:" validate={validate} />
+              <TextArea name="bio" label="Bio" validate={validate} />
+              <RadioGroup name="gender" label="Gender" validate={validate}>
                 <Radio value="male" label="Male:" />
                 <Radio value="female" label="Female:" />
               </RadioGroup>
-              <Select name="status" label="Relationship status:" required>
+              <Select name="status" label="Relationship status:" validate={validate}>
                 <Option value="" disabled>
                   Select One...
                 </Option>
@@ -53,7 +54,6 @@ class SimpleValidation extends Component {
                 name="colors"
                 label="Colors:"
                 multiple
-                required
                 style={{ height: '100px', width: '200px' }}>
                 <Option value="red">Red</Option>
                 <Option value="green">Green</Option>
@@ -62,7 +62,7 @@ class SimpleValidation extends Component {
                 <Option value="orange">Orange</Option>
                 <Option value="purple">Purple</Option>
               </Select>
-              <Checkbox name="authorize" label="Authorize:" required />
+              <Checkbox name="authorize" label="Authorize:" validate={validate} />
               <button type="submit">Submit</button>
             </div>
             <div style={{ flex: 2, minWidth: '300px', marginLeft: '3rem' }}>
