@@ -90,7 +90,7 @@
     "@spectrum-icons/workflow": "^4.1.0",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addons": "^6.5.12",
-    "@storybook/react": "^6.5.12",
+    "@storybook/react": "^7.6.8",
     "@storybook/theming": "^6.5.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
