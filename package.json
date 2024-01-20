@@ -129,7 +129,7 @@
     "universal-dotenv": "^1.8.3",
     "vite": "^4.2.0",
     "webpack": "^4.46.0",
-    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^4.7.4",
     "webpack-node-externals": "^1.7.2",
